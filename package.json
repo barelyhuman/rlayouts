@@ -1,0 +1,28 @@
+{
+  "name": "rlayouts",
+  "version": "0.0.1",
+  "author": {
+    "name": "Reaper",
+    "email": "ahoy@barelyhuman.dev",
+    "url": "https://reaper.im"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "main": "src/index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tsup": "^3.12.1",
+    "typescript": "^4.1.3"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts",
+    "dev": "tsup src/index.ts --watch"
+  }
+}
