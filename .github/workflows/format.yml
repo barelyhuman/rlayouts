@@ -17,9 +17,9 @@ jobs:
       - name: Format
         run: |
           npm i
-          npx standard --fix | echo "Will fix everything I can"
+          npm run fix
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.1.2
         with:
-          commit_message: "ci: formatted"
+          commit_message: 'ci: formatted'
           branch: ${{ github.head_ref }}
