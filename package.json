@@ -1,13 +1,21 @@
 {
-  "name": "rlayouts",
+  "name": "@barelyreaper/rlayouts",
   "version": "0.0.1",
+  "homepage": "https://github.com/barelyhuman/rlayouts",
   "author": {
     "name": "Reaper",
     "email": "ahoy@barelyhuman.dev",
     "url": "https://reaper.im"
   },
+  "bugs": {
+    "url": "https://github.com/barelyhuman/rlayouts/issues",
+    "email": "ahoy@barelyhuman.dev"
+  },
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/*"
+    "dist/*",
+    "README.md",
+    "LICENSE"
   ],
   "main": "src/index.ts",
   "license": "MIT",
