@@ -17,12 +17,14 @@
     "README.md",
     "LICENSE"
   ],
-  "main": "src/index.ts",
+  "browser": "dist/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^17.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "ts-standard": "^10.0.0",
     "tsup": "^3.12.1",
     "typescript": "^4.1.3"
   },
@@ -30,7 +32,14 @@
     "node": ">=12"
   },
   "scripts": {
-    "build": "tsup src/index.ts --dts",
-    "dev": "tsup src/index.ts --watch"
+    "build": "tsup src/index.ts --dts --format esm,cjs,iife --legacy-output",
+    "dev": "tsup src/index.ts --dts --watch --format esm,cjs,iife --legacy-output",
+    "fix": "npx ts-standard --fix || echo 'Fixed everything I could'"
+  },
+  "ts-standard": {
+    "ignore": [
+      "/node_modules",
+      "/dist"
+    ]
   }
 }
