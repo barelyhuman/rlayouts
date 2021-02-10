@@ -7,7 +7,7 @@ export interface IPadding {
   all?: number
 }
 
-export function Padding ({ children, x, y, all }: IPadding): ReactNode {
+export function Padding ({ children, x = 0, y = 0, all = 0 }: IPadding): ReactNode {
   const multiplier = 8
 
   const padding = {
@@ -35,10 +35,10 @@ export function Padding ({ children, x, y, all }: IPadding): ReactNode {
   }
 
   const paddingStyle = {
-    paddingTop: `${padding.top}'px'`,
-    paddingRight: `${padding.right}'px'`,
-    paddingLeft: `${padding.left}'px'`,
-    paddingBottom: `${padding.bottom}'px`
+    paddingTop: `${padding.top}px`,
+    paddingRight: `${padding.right}px`,
+    paddingLeft: `${padding.left}px`,
+    paddingBottom: `${padding.bottom}px`
   }
 
   return (

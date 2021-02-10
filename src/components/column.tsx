@@ -1,9 +1,9 @@
 import React from 'react'
-import { IRowAndColumn } from '../types/types'
+import { IRowAndColumn } from '../types'
 
-export const Column: React.FC<IRowAndColumn> = ({
+export const Col: React.FC<IRowAndColumn> = ({
   children,
-  inline,
+  inline = false,
   wrap = false,
   reverse = true,
   justifyContent,

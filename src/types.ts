@@ -1,9 +1,9 @@
 export interface IRowAndColumn {
-  inline: boolean
-  wrap: boolean
-  reverse: boolean
-  justifyContent: PositionDirection
-  alignItems: PositionDirection
+  inline?: boolean
+  wrap?: boolean
+  reverse?: boolean
+  justifyContent?: PositionDirection
+  alignItems?: PositionDirection
 }
 
 export enum PositionDirection {
