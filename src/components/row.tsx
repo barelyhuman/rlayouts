@@ -1,4 +1,5 @@
 import React from 'react';
+import { IRowAndColumn } from '../types/types';
 
 export const Row: React.FC<IRowAndColumn> = ({
   children,
