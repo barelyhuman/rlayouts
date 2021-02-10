@@ -53,13 +53,22 @@ declare type ISpacer = {
 
 # Dev
 
+- Make sure you have `yarn` installed and node version greater than `12`,
+- Run the below commands in the order for starting the dev server
+
+## For Contributors
+
+- Make sure you fork the repository and are using the `main` branch for the latest code
+- Make sure your git commit messages follow the `commitlint` standard as [commitlog](https://github.com/barelyhuman/commitlog) will be used to generate changelogs.
+- We prefer rebasing the commit over Merge, so create a feature branch, create your list of commits, squash them into a single commit so we can rebase a single feature commit.
+
 ```sh
-npm i
-npm run dev
+yarn
+yarn dev
 ```
 
 # Build
 
 ```sh
-npm run build
+yarn build
 ```
