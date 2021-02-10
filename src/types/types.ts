@@ -1,4 +1,4 @@
-interface IRowAndColumn {
+export interface IRowAndColumn {
   inline: boolean;
   wrap: boolean;
   reverse: boolean;
@@ -6,7 +6,7 @@ interface IRowAndColumn {
   alignItems: PositionDirection;
 }
 
-enum PositionDirection {
+export enum PositionDirection {
   Start = 'start',
   End = 'end',
   Center = 'center',
