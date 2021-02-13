@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { IRowAndColumn } from 'types'
 
 export const Row: React.FC<IRowAndColumn> = ({
@@ -9,7 +9,7 @@ export const Row: React.FC<IRowAndColumn> = ({
   justifyContent,
   alignItems
 }) => {
-  const styles = {
+  const styles:CSSProperties = {
     display: inline ? 'inline-flex' : 'flex',
     flexDirection: reverse ? 'row' : 'row-reverse',
     flexWrap: wrap ? 'wrap' : 'nowrap',

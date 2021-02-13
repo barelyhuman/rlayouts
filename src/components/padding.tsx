@@ -11,17 +11,17 @@ export function Padding ({ children, x = 0, y = 0, all = 0 }: IPadding): ReactNo
     right: 0
   }
 
-  if (y) {
+  if (y > 0) {
     padding.top = y * multiplier
     padding.bottom = y * multiplier
   }
 
-  if (x) {
+  if (x > 0) {
     padding.left = x * multiplier
     padding.right = x * multiplier
   }
 
-  if (all) {
+  if (all > 0) {
     padding.top = all * multiplier
     padding.bottom = all * multiplier
     padding.left = all * multiplier

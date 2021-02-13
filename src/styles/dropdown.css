@@ -1,0 +1,145 @@
+.rlayouts-dropdown {
+    --background-color: #fff;
+    --primary-color: #000;
+    --color-text-active: #000;
+    --color-text-hover-active: #fff;
+    --color-text-hover: #000;
+    --color-border: #000;
+    --color-menu-item-hover: rgba(0, 0, 0, 1);
+    --transition-duration: 0.35s;
+  }
+  
+  .rlayouts-dropdown.outer-wrapper {
+    position: relative;
+    width: 200px;
+    height: 56px;
+  }
+  
+  .rlayouts-dropdown .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: var(--background-color);
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.025),
+      0 9px 46px 8px rgba(0, 0, 0, 0.025), 0 11px 15px -7px rgba(0, 0, 0, 0.025);
+    border-radius: 0.5rem;
+    border: 2px solid var(--primary-color);
+    max-height: 46px;
+    transition: max-height var(--transition-duration),
+      border-color var(--transition-duration);
+  }
+  
+  .rlayouts-dropdown .wrapper.open {
+    max-height: 204px;
+  }
+  
+  .rlayouts-dropdown .wrapper.hover {
+    border-color: darken(var(--color-border), 0.075);
+  }
+  
+  .rlayouts-dropdown .menu {
+    padding: 0 0.5rem 0.5rem;
+    transition: all var(--transition-duration);
+  }
+  
+  .rlayouts-dropdown .menu-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+  
+  .rlayouts-dropdown .menu-item:hover {
+    color: var(--color-text-hover-active);
+    background: var(--color-menu-item-hover);
+  }
+  
+  .rlayouts-dropdown .menu-item.danger > .menu-item-icon,
+  .rlayouts-dropdown .menu-item.danger > .menu-item-text {
+    color: #ff8a8a;
+  }
+  
+  .rlayouts-dropdown .menu-item-icon {
+    margin-right: 0.325rem;
+    font-size: 16px;
+    color: var(--color-text-active);
+    border-radius: 50%;
+    padding: 2px;
+  }
+  
+  .rlayouts-dropdown .menu-item-text {
+    color: inherit;
+    margin: 0;
+  }
+  
+  .rlayouts-dropdown .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem 0 1rem;
+    font-weight: 500;
+    color: var(--color-text-active);
+    height: 46px;
+    line-height: 64px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color var(--transition-duration),
+      color var(--transition-duration);
+  }
+  
+  .rlayouts-dropdown .menu-button:hover {
+    color: var(--color-text-hover);
+  }
+  
+  .rlayouts-dropdown .menu-button:hover .rectangle {
+    background: var(--color-text-hover);
+  }
+  
+  .rlayouts-dropdown .menu-text {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .rlayouts-dropdown .icon-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .rlayouts-dropdown .rectangle {
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    border-radius: 2px;
+    transform-origin: 50% 50%;
+    background: var(--color-text-active);
+    transition: transform var(--transition-duration),
+      background var(--transition-duration);
+  }
+  
+  .rlayouts-dropdown .rectangle.rectangle1 {
+    transform: rotate(-45deg) scaleY(1) translate(0);
+    top: 8px;
+    left: 8px;
+  }
+  
+  .rlayouts-dropdown .rectangle.rectangle2 {
+    transform: rotate(45deg) scaleY(1) translate(0);
+    top: 8px;
+    right: 8px;
+  }
+  
+  .rlayouts-dropdown .wrapper.open .rectangle1 {
+    transform: rotate(-45deg) scaleY(1.75) translate(2px, 1px);
+  }
+  
+  .rlayouts-dropdown .wrapper.open .rectangle2 {
+    transform: rotate(45deg) scaleY(1.75) translate(-2px, 1px);
+  }
+  

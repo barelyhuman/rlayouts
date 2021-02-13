@@ -2,6 +2,9 @@
   "name": "@barelyreaper/rlayouts",
   "version": "0.0.3-dev.0",
   "homepage": "https://github.com/barelyhuman/rlayouts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": {
     "name": "Reaper",
     "email": "ahoy@barelyhuman.dev",
@@ -11,23 +14,20 @@
     "url": "https://github.com/barelyhuman/rlayouts/issues",
     "email": "ahoy@barelyhuman.dev"
   },
-  "types": "dist/index.d.ts",
   "files": [
     "dist/*",
     "README.md",
     "LICENSE"
   ],
-  "browser": "dist/index.js",
-  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@sindresorhus/tsconfig": "^0.8.0",
     "@types/classnames": "^2.2.11",
+    "@types/node": "^14.14.27",
     "@types/react": "^17.0.1",
     "classnames": "^2.2.6",
     "husky": ">=4",
     "lint-staged": ">=10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "release": "^6.3.0",
     "styled-jsx": "^3.4.2",
     "ts-standard": "^10.0.0",
@@ -38,9 +38,11 @@
     "node": ">=12"
   },
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs,iife --legacy-output",
-    "dev": "tsup src/index.ts --dts --watch --format esm,cjs,iife --legacy-output",
-    "fix": "npx ts-standard --fix || echo 'Fixed everything I could'"
+    "build:tsup": "tsup src/index.ts --dts --format esm,cjs,iife --legacy-output",
+    "dev:tsup": "tsup src/index.ts --dts --watch --format esm,cjs,iife --legacy-output",
+    "fix": "npx ts-standard --fix || echo 'Fixed everything I could'",
+    "build": "microbundle --jsx React.createElement --css inline --css-modules true",
+    "dev": "microbundle watch --jsx React.createElement --css inline --css-modules true"
   },
   "ts-standard": {
     "ignore": [
@@ -53,10 +55,16 @@
       "*": "npm run fix"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "microbundle": "^0.13.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
