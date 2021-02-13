@@ -18,13 +18,8 @@ jobs:
       - name: Generate Change Log
         id: generate_log
         run: |
-          curl -s https://api.github.com/repos/barelyhuman/commitlog/releases/38019056 \
-          | grep browser_download_url \
-          | grep linux-amd64 \
-          | cut -d '"' -f 4 \
-          | wget -qi -
-          tar -xvzf commitlog-linux-amd64.tar.gz
-          chmod +x commitlog 
+          chmod +x generate-changelog.sh
+          ./generate-changelog.sh
           ./commitlog . -i fix,feat,refactor > CHANGELOG.txt
       - name: Release
         uses: softprops/action-gh-release@v1
