@@ -10,6 +10,9 @@
 	<br>
 </div>
 
+
+**Note: rlayouts does contain a few UI components that I recreate quite often though the primary scope of the library is to just have layout components.**
+
 # Motivation
 
 I copy paste the same set of components for layout in almost every react project that I work on so this is going to act as a base from now. I still prefer copying the original code around to make it easier to modify and fix when needed.
@@ -47,9 +50,12 @@ declare type ISpacer = {
 
 - [x] Padding
 - [x] Spacer
-- [ ] Row
-- [ ] Col
-- [ ] Card
+- [x] Row
+- [x] Col
+- [x] Card
+- [x] Dropdown
+- [ ] Buttons
+- [ ] Autocomplete
 
 # Dev
 
