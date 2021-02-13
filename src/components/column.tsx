@@ -1,5 +1,5 @@
 import React from 'react'
-import { IRowAndColumn } from '../types'
+import { IRowAndColumn } from 'types'
 
 export const Col: React.FC<IRowAndColumn> = ({
   children,

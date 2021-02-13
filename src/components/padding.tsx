@@ -1,11 +1,5 @@
 import React, { ReactNode } from 'react'
-
-export interface IPadding {
-  children: React.ReactNode
-  x?: number
-  y?: number
-  all?: number
-}
+import { IPadding } from 'types'
 
 export function Padding ({ children, x = 0, y = 0, all = 0 }: IPadding): ReactNode {
   const multiplier = 8

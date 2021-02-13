@@ -1,10 +1,5 @@
 import React, { ReactNode } from 'react'
-
-export interface ISpacer {
-  inline: boolean
-  x: number
-  y: number
-}
+import { ISpacer } from 'types'
 
 export function Spacer ({ inline, x, y }: ISpacer): ReactNode {
   const style = {

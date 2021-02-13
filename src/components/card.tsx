@@ -1,10 +1,6 @@
 import React, { ReactNode } from 'react'
 import cx from 'classnames'
-
-export interface ICard {
-  children: ReactNode
-  className?: string
-}
+import { ICard } from 'types'
 
 export function Card ({ children, className, ...props }: ICard): ReactNode {
   const classNames = cx(className)
