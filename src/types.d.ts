@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 export interface IRowAndColumn {
-  inline?: boolean;
-  wrap?: boolean;
-  reverse?: boolean;
-  justify?: PositionDirection;
-  align?: PositionDirection;
+  inline?: boolean
+  wrap?: boolean
+  reverse?: boolean
+  justify?: PositionDirection
+  align?: PositionDirection
 }
 
 export enum PositionDirection {
@@ -16,32 +16,32 @@ export enum PositionDirection {
 }
 
 export interface IPadding {
-  children: React.ReactNode;
-  x?: number;
-  y?: number;
-  all?: number;
+  children: React.ReactNode
+  x?: number
+  y?: number
+  all?: number
 }
 
 export interface ICard {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode
+  className?: string
 }
 
 export interface ISpacer {
-  inline: boolean;
-  x: number;
-  y: number;
+  inline: boolean
+  x: number
+  y: number
 }
 
 export interface IDropdownMenuItem {
-  label: string;
-  value: string | number;
-  icon?: string;
+  label: string
+  value: string | number
+  icon?: string
 }
 
 export interface IDropdown {
-  menuItems: IDropdownMenuItem[];
-  label: string;
-  open: boolean;
-  onClick: (item: IDropdownMenuItem) => {};
+  menuItems: IDropdownMenuItem[]
+  label: string
+  open: boolean
+  onClick: (item: IDropdownMenuItem) => {}
 }
