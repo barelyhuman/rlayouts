@@ -6,15 +6,15 @@ export const Row: React.FC<IRowAndColumn> = ({
   inline = false,
   wrap = false,
   reverse = true,
-  justifyContent,
-  alignItems
+  justify,
+  align
 }) => {
   const styles:CSSProperties = {
     display: inline ? 'inline-flex' : 'flex',
     flexDirection: reverse ? 'row' : 'row-reverse',
     flexWrap: wrap ? 'wrap' : 'nowrap',
-    justifyContent: justifyContent,
-    alignItems: alignItems
+    justifyContent: justify,
+    alignItems: align
   }
   return <div style={styles}>{children}</div>
 }

@@ -81,6 +81,7 @@
   .rlayouts-dropdown .menu-button {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     justify-content: space-between;
     padding: 0 0.75rem 0 1rem;
     font-weight: 500;
