@@ -10,6 +10,8 @@
 	<br>
 </div>
 
+[![commitlog](https://img.shields.io/badge/changelogs-commitlog-blue)](https://github.com/barelyhuman/commitlog)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 **Note: rlayouts does contain a few UI components that I recreate quite often though the primary scope of the library is to just have layout components.**
 
