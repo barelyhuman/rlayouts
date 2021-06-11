@@ -1,0 +1,17 @@
+site:
+  name: rlayouts
+  link: https://rlayouts.reaper.im
+  description: Simple Layout Components for React
+
+template_names:
+  post_template: "blogPostHTML"
+  post_index_template: "blogIndexHTML"
+  page_template: "simplePageHTML"
+  rss_template: "rssTemplate"
+
+content_path: "./contents"
+templates_path: "./templates"
+out_path: "./out"
+public_folder: "./public"
+indexed_folders:
+  - components
